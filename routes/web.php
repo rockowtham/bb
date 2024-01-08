@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\Admin\AdminController;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ProductController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,4 +26,9 @@ Route::prefix('/admin')->namespace('App\Http\Controllers\Admin')->group(function
     });
    
 });
+
+Route::resource('products', ProductController::class);
+Route::get('/products', [ProductController::class, 'index'])->name('products.index');
+Route::post('/update-featured-status/{id}', [ProductController::class, 'updateFeaturedStatus']);
+
 

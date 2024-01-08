@@ -17,6 +17,7 @@ class AdminController extends Controller
     public function login(Request $request){
         if($request->isMethod('post')){
             $data = $request->all();
+            // dd($data);
             if(Auth::guard('admin')->attempt(['email' => $data['email'],'password'=>$data['password']])){
                 return redirect("admin/dashboard");
             } else {

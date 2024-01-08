@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AdminLTE 3 | Dashboard 2</title>
+  <meta name="csrf-token" content="{{ csrf_token() }}">
+  <title>AdminLTE 3 | @yield('title')</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -13,6 +14,10 @@
   <link rel="stylesheet" href="{{ url('admin/plugins/overlayScrollbars/css/OverlayScrollbars.min.css') }}">
   <!-- Theme style -->
   <link rel="stylesheet" href="{{ url('admin/css/adminlte.min.css') }}">
+  <!-- Include Toastr CSS and JS files -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastr@2.1.4/dist/toastr.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/toastr@2.1.4/dist/toastr.min.js" integrity="sha384-e2qSY6YqK9W5b3bgpe3dELE5XDt9MXZU8dA2QF8UH6z5lgoNFOhTk6t4Udm/E1F5" crossorigin="anonymous"></script>
+
 </head>
 <body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
 <div class="wrapper">
@@ -66,5 +71,6 @@
 <script src="{{ url('admin/js/demo.js') }}"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="{{ url('admin/js/pages/dashboard2.js') }}"></script>
+
 </body>
 </html>
