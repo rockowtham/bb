@@ -58,12 +58,12 @@
                   <p>Products List</p>
                 </a>
               </li>
-              <li class="nav-item">
+              {{-- <li class="nav-item">
                 <a href="{{ route('products.index') }}" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Add Products</p>
                 </a>
-              </li>
+              </li> --}}
             </ul>
           </li>
           <li class="nav-item menu-open">
@@ -77,16 +77,18 @@
               <ul class="nav nav-treeview">
                 <li class="nav-item">
                   <a href="./index.html" class="nav-link">
+                    <a href="{{ route('categories.index') }}" class="nav-link active">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Category List</p>
+                    </a>
                   </a>
                 </li>
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                   <a href="./index2.html" class="nav-link active">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Add Category</p>
                   </a>
-                </li>
+                </li> --}}
               </ul>
           </li>
           <li class="nav-item menu-open">
@@ -99,17 +101,17 @@
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="./index.html" class="nav-link">
+                  <a href="{{ route('users.index') }}" class="nav-link active">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Users List</p>
                   </a>
                 </li>
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                   <a href="./index2.html" class="nav-link active">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Add Users</p>
                   </a>
-                </li>
+                </li> --}}
               </ul>
           </li>
         </ul>
