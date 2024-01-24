@@ -435,19 +435,19 @@ button:disabled:hover {
 }
 
 .icon-camera-fill:before {
-	content: "î¤‹"
+	content: ""
 }
 
 .icon-camera:before {
-	content: "î¤Œ"
+	content: ""
 }
 
 .icon-cancel:before {
-	content: "î¤"
+	content: ""
 }
 
 .icon-cart:before {
-	content: "î¤Ž"
+	content: ""
 }
 
 .icon-check-box:before {
@@ -591,11 +591,11 @@ button:disabled:hover {
 }
 
 .icon-right-arrow:before {
-	content: "î¤²"
+	content: ""
 }
 
 .icon-search:before {
-	content: "î¤³"
+	content: ""
 }
 
 .icon-share:before {
@@ -640,23 +640,23 @@ button:disabled:hover {
 }
 
 .icon-toast-exclamation-mark:before {
-	content: "î¤¾"
+	content: ""
 }
 
 .icon-toast-info:before {
-	content: "î¤¿"
+	content: ""
 }
 
 .icon-truck:before {
-	content: "î¥€"
+	content: ""
 }
 
 .icon-uncheck:before {
-	content: "î¥"
+	content: ""
 }
 
 .icon-users:before {
-	content: "î¥‚"
+	content: ""
 }
 
 .journal-scroll::-webkit-scrollbar {

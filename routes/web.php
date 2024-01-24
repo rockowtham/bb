@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\pages\PageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,9 +19,7 @@ use App\Http\Controllers\UserController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [HomeController::class, 'index']);
 
 Route::prefix('/admin')->namespace('App\Http\Controllers\Admin')->group(function(){
     Route::match(['get','post'],'login','AdminController@login');
@@ -36,6 +36,13 @@ Route::post('/update-featured-status/{id}', [ProductController::class, 'updateFe
 
 Route::resource('categories', CategoryController::class);
 Route::resource('users', UserController::class);
+Route::get('/about-us', [PageController::class, 'aboutUs'])->name('aboutUs');
+Route::get('/terms-and-conditions', [PageController::class, 'termsAndConditions'])->name('termsAndConditions');
+Route::get('/privacy-policy', [PageController::class, 'privacyPolicy'])->name('privacyPolicy');
+Route::get('/payment-policy', [PageController::class, 'paymentPolicy'])->name('paymentPolicy');
+Route::get('/shipping-policy', [PageController::class, 'shippingPolicy'])->name('shippingPolicy');
+Route::get('/refund-policy', [PageController::class, 'refundPolicy'])->name('refundPolicy');
+Route::get('/return-policy', [PageController::class, 'returnPolicy'])->name('returnPolicy');
 // Route::prefix('admin')->name('admin.')->group(function () {
 //     Route::resource('users', AdminController::class);
 // });

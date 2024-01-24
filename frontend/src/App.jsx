@@ -1,24 +1,15 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import ProductList from './components/products/ProductsList';
+// App.jsx
+import React from 'react';
+import Header from './components/common/Header';
+import Routes from './routes';
 
-function App() {
-  const products = [
-    { id: 1, name: 'Product 1', price: '$20', image: 'product1.jpg' },
-    { id: 2, name: 'Product 2', price: '$25', image: 'product2.jpg' },
-    // Add more products as needed
-  ];
-
-  const [count, setCount] = useState(0)
-
+const App = () => {
   return (
     <div>
-    <h1>Welcome to our E-commerce Store</h1>
-    <ProductList products={products} />
-  </div>
-  )
-}
+      <Header />
+      <Routes />
+    </div>
+  );
+};
 
-export default App
+export default App;
